@@ -36,7 +36,7 @@ app.get("/", (req, res) => {
 app.post("/post", function (req, res) {
   console.log(req.body);
   const { name, location, orderdate, qty, jobid, status } = req.body;
-  const newStudent = new JobData({
+  const newJobData = new JobData({
     name,
     location,
     orderdate,
@@ -45,7 +45,7 @@ app.post("/post", function (req, res) {
     status,
   });
 
-  newStudent
+  newJobData
     .save()
     .then(() => res.json("Data Added Successfully"))
     .catch((err) => res.status(400).json("Error: " + err));
