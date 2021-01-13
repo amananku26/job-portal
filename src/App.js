@@ -1,0 +1,13 @@
+import logo from './logo.svg';
+import './App.css';
+import { FastBackwardOutlined } from '@ant-design/icons';
+import Nav from "./Components/Nav"
+function App() {
+  return (
+    <div className="App">
+      <Nav/>
+    </div>
+  );
+}
+
+export default App;
